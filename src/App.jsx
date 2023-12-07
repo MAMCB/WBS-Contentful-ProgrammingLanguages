@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import "./App.css";
 import { createClient } from "contentful";
 import { Routes,Route } from "react-router-dom";
@@ -18,6 +18,25 @@ function App() {
     accessToken: ACCESS_TOKEN
   });
 
+  useEffect(()=>{
+    client
+      .getEntries()
+      .then((response) => setLanguages(response.items.map((e)=>e.fields)))
+      .catch(console.error);
+  },[])
+  console.log(languages);
+  console.log(languages.filter((language) => language.type === "Programming"));
+  console.log(languages.filter((language) => language.type === "Scripting"));
+  console.log(languages.filter((language) => language.type === "Query"));
+
+//   useEffect(()=>{
+//  client
+//    .getEntry("2u1qwRm2mazyQk1phkDY50")
+//    .then((entry) => console.log(entry))
+//    .catch(console.error);
+//   },[])
+ 
+
   return (
     <>
       <Routes>
@@ -27,7 +46,7 @@ function App() {
           element={
             <LanguageGrid
               type={languages.filter(
-                (language) => language.type === "programming"
+                (language) => language.type === "Programming"
               )}
             />
           }
@@ -37,7 +56,7 @@ function App() {
           element={
             <LanguageGrid
               type={languages.filter(
-                (language) => language.type === "scripting"
+                (language) => language.type === "Scripting"
               )}
             />
           }
@@ -47,7 +66,7 @@ function App() {
           element={
             <LanguageGrid
               type={languages.filter(
-                (language) => language.type === "query"
+                (language) => language.type === "Query"
               )}
             />
           }
