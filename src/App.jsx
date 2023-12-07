@@ -5,7 +5,7 @@ import { createClient } from "contentful";
 import { Routes,Route } from "react-router-dom";
 import Home from "./pages/HomePage/Home";
 import LanguageGrid from "./pages/LanguageGrid";
-import NavBar from './NavBar';
+import NavBar from "./components/NavBar";
 
 function App() {
   const[languages,setLanguages]=useState([])

@@ -1,4 +1,4 @@
-// src/NavBar/index.jsx
+
 import React from 'react';
 import { Navbar, Container, Nav } from 'react-bootstrap';
 import './index.css';
