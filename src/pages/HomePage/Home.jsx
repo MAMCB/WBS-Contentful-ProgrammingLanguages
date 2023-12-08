@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-
+import "./index.css"
 
 
 const Home = ({ languages }) => {
@@ -21,27 +21,48 @@ const Home = ({ languages }) => {
     setLanguageToFind(e.target.value.toLowerCase());
   };
   return (
-    <div>
-      {displayLanguage ? (
-        <div>
-          <img
-            src={displayLanguage.thumbnail.fields.file.url}
-            alt="displayLanguage.thumbnail.fields.title"
+    <>
+      {languages.length > 0 ? (
+        <div className="home">
+          {displayLanguage ? (
+            <div>
+              <img
+                src={displayLanguage.thumbnail.fields.file.url}
+                alt="displayLanguage.thumbnail.fields.title"
+              />
+              <h2>{displayLanguage.name}</h2>
+              <p>{displayLanguage.description}</p>
+            </div>
+          ) : (
+            <div>
+              <h1>Explore the world of Programming Languages</h1>
+              <div className="logoSlide">
+                <img
+                  className="logoImages"
+                  src={
+                    languages[
+                      Math.floor(Math.random() * (languages.length - 1))
+                    ].thumbnail.fields.file.url
+                  }
+                  alt="logo"
+                />
+               
+              </div>
+            </div>
+          )}
+
+          <input
+            className="searchInput"
+            type="text"
+            onChange={storeValue}
+            placeholder="Search for a language"
           />
-          <h2>{displayLanguage.name}</h2>
-          <p>{displayLanguage.description}</p>
+          <button onClick={handleSearch}>Search</button>
         </div>
       ) : (
-        <h1>Explore the world of Programming Languages</h1>
+        <p>Loading</p>
       )}
-
-      <input
-        type="text"
-        onChange={storeValue}
-        placeholder="Search for a language"
-      />
-      <button onClick={handleSearch}>Search</button>
-    </div>
+    </>
   );
 };
 
