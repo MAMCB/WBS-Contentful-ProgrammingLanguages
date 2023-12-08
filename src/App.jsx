@@ -1,3 +1,4 @@
+import React from "react";
 import { useState } from "react";
 import "./App.css";
 import { createClient } from "contentful";
@@ -6,6 +7,7 @@ import Home from "./pages/HomePage/Home";
 import { useEnvironmentVariables } from './hooks/useEnvironmentVariables';
 import LanguageGrid from './components/LanguageGrid'
 
+import NavBar from "./components/NavBar";
 
 function App() {
   const[languages,setLanguages]=useState([])
@@ -19,6 +21,7 @@ function App() {
 
   return (
     <>
+      <NavBar /> {/* Include the NavBar component */}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route
