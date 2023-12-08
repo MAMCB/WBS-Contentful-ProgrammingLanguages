@@ -3,14 +3,13 @@ import "./App.css";
 import { createClient } from "contentful";
 import { Routes,Route } from "react-router-dom";
 import Home from "./pages/HomePage/Home";
-import LanguageGrid from "./pages/LanguageGrid";
+import { useEnvironmentVariables } from './hooks/useEnvironmentVariables';
+import LanguageGrid from './components/LanguageGrid'
+
 
 function App() {
   const[languages,setLanguages]=useState([])
-  
-  const SPACE_ID = import.meta.env.VITE_SPACE_ID;
-  const ENVIRONMENT_NAME = import.meta.env.VITE_ENVIRONMENT_NAME;
-  const ACCESS_TOKEN = import.meta.env.VITE_ACCESS_TOKEN;
+  const { SPACE_ID, ENVIRONMENT_NAME, ACCESS_TOKEN } = useEnvironmentVariables();
 
   const client = createClient({
     space: SPACE_ID,
