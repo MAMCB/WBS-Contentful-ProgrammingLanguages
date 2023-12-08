@@ -2,7 +2,9 @@ import React from 'react'
 
 const LanguageGrid = ({type}) => {
   return (
-    <div>LanguageGrid</div>
+    <div>
+      {type.map((e)=><h2>{e.name}</h2>)}
+    </div>
   )
 }
 
