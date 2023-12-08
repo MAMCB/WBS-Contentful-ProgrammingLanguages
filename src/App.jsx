@@ -29,7 +29,9 @@ function App() {
   
  const handleSearch = (e)=>{
     console.log(languageToFind);
-    const languageToDisplay = languages.find((language)=>language.name===languageToFind);
+    const languageToDisplay = languages.find(
+      (language) => language.name.toLowerCase() === languageToFind
+    );
     
    languageToDisplay? setDisplayLanguage(languageToDisplay):alert("Could not find that language");
 
@@ -37,7 +39,7 @@ function App() {
 
  const storeValue = (e)=>{
   console.log(e.target.value)
-  setLanguageToFind(e.target.value);
+  setLanguageToFind(e.target.value.toLowerCase());
  }
 
  console.log(languages);
