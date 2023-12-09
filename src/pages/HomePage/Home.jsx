@@ -39,10 +39,12 @@ const Home = ({ languages }) => {
               <p>{displayLanguage.description}</p>
             </div>
           ) : (
-            <div>
-              <h1>Explore the world of Programming Languages</h1>
+            <div className="hero">
+              <h1>
+               Explore the Universe of <br/> <span>Programming  <br/>Languages</span>
+              </h1>
               <div className="logoSlide">
-                {/* <img
+                 {/* <img
                   className="logoImages"
                   src={
                     languages[
@@ -50,21 +52,22 @@ const Home = ({ languages }) => {
                     ].thumbnail.fields.file.url
                   }
                   alt="logo"
-                /> */}
+                />  */}
                 <img id="gif" src={Gif} alt="gif animation" />
-               
               </div>
-              
             </div>
           )}
-
-          <input
-            className="searchInput"
-            type="text"
-            onChange={storeValue}
-            placeholder="Search for a language"
-          />
-          <button onClick={handleSearch}>Search</button>
+          <div className="input-elements">
+            <input
+              className="searchInput"
+              type="text"
+              onChange={storeValue}
+              placeholder="Search for a language"
+            />
+            <button id="search-button" onClick={handleSearch}>
+              Search
+            </button>
+          </div>
         </div>
       ) : (
         <p>Loading</p>
