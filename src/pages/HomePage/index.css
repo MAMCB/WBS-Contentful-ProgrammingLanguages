@@ -24,7 +24,7 @@ h1{
 .logoImages{
     width:20rem;
     margin: 2rem;
-    /* animation:rotate 3s linear 1s infinite alternate; */
+    animation:rotate 3s linear 1s infinite alternate;
 
 }
 
