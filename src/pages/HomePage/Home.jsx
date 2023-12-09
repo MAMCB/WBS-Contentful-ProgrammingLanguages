@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import "./index.css"
-
+import Gif from "../../GIF/Animation - 1702113065510.gif";
 
 
 
@@ -42,7 +42,7 @@ const Home = ({ languages }) => {
             <div>
               <h1>Explore the world of Programming Languages</h1>
               <div className="logoSlide">
-                <img
+                {/* <img
                   className="logoImages"
                   src={
                     languages[
@@ -50,7 +50,8 @@ const Home = ({ languages }) => {
                     ].thumbnail.fields.file.url
                   }
                   alt="logo"
-                />
+                /> */}
+                <img id="gif" src={Gif} alt="gif animation" />
                
               </div>
               
