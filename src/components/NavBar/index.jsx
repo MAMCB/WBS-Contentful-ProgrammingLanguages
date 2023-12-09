@@ -13,10 +13,10 @@ function BasicExample() {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link to="/">Home</Nav.Link>
-            <Nav.Link to="/programming">Programming languages</Nav.Link>
-            <Nav.Link to="scripting">Scripting languages</Nav.Link>
-            <Nav.Link to="query">Query languages</Nav.Link>
+            <Nav.Link to="/"><h5>Home</h5></Nav.Link>
+            <Nav.Link to="/programming"><h5>Programming languages</h5></Nav.Link>
+            <Nav.Link to="scripting"><h5>Scripting languages</h5></Nav.Link>
+            <Nav.Link to="query"><h5>Query languages</h5></Nav.Link>
            
           </Nav>
         </Navbar.Collapse>
