@@ -3,7 +3,8 @@
 .bg-body-tertiary {
     background-color: rgb(27, 17, 71); 
     color: rgb(241, 218, 10);
-   padding: 0rem;
+    padding: 0;
+  
   }
   
   /* Style the navbar links */
@@ -24,20 +25,22 @@
   .navbar-nav .nav-item.dropdown:hover .dropdown-menu {
     background-color: rgb(27, 17, 71);
     color: rgb(241, 218, 10);
-    
   }
   
   
    .navbar.fixed-top {
     position: fixed;
     width: 100%;
+    
     z-index: 1000;
+      
   }
   
   .navbar-nav {
     width: 100%;
     display: flex;
     justify-content: space-around; 
+    max-height: inherit;
   }
 
   #navBar{

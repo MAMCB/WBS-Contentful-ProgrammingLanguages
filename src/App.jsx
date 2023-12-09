@@ -8,6 +8,8 @@ import { useEnvironmentVariables } from './hooks/useEnvironmentVariables';
 import LanguageGrid from './components/LanguageGrid'
 
 import NavBar from "./components/NavBar";
+import Footer from "./components/Footer";
+
 
 function App() {
   const[languages,setLanguages]=useState([])
@@ -55,6 +57,7 @@ function App() {
           }
         />
       </Routes>
+     < Footer /> 
     </>
   );
 }
