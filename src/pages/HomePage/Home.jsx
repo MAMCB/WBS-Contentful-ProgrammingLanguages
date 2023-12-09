@@ -1,21 +1,13 @@
 import { useState, useEffect } from "react";
 import "./index.css"
-import Lottie from "lottie-react";
-import animationData from "../../lotties/programming-animation.json";
+
 
 
 const Home = ({ languages }) => {
   const [displayLanguage, setDisplayLanguage] = useState(null);
   const [languageToFind, setLanguageToFind] = useState("");
 
-  const defaultOptions = {
-    loop: true,
-    autoplay: true,
-    animationData: animationData,
-    rendererSettings: {
-      preserveAspectRatio: "xMidYMid slice",
-    },
-  };
+
 
   const handleSearch = (e) => {
     console.log(languageToFind);
@@ -48,7 +40,7 @@ const Home = ({ languages }) => {
           ) : (
             <div>
               <h1>Explore the world of Programming Languages</h1>
-              {/* <div className="logoSlide">
+              <div className="logoSlide">
                 <img
                   className="logoImages"
                   src={
@@ -59,8 +51,8 @@ const Home = ({ languages }) => {
                   alt="logo"
                 />
                
-              </div> */}
-              <Lottie options={defaultOptions} height={400} width={400} />
+              </div>
+              
             </div>
           )}
 
