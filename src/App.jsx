@@ -4,7 +4,7 @@ import { createClient } from "contentful";
 import { Routes,Route } from "react-router-dom";
 import Home from "./pages/HomePage/Home";
 import { useEnvironmentVariables } from './hooks/useEnvironmentVariables';
-import LanguageGrid from './components/LanguageGrid'
+import LanguagesPage from './pages/LanguagesPage'
 
 
 function App() {
@@ -24,30 +24,24 @@ function App() {
         <Route
           path="/programming"
           element={
-            <LanguageGrid
-              type={languages.filter(
-                (language) => language.type === "programming"
-              )}
+            <LanguagesPage
+              type="Programming"
             />
           }
         />
         <Route
           path="/script"
           element={
-            <LanguageGrid
-              type={languages.filter(
-                (language) => language.type === "scripting"
-              )}
+            <LanguagesPage
+              type="Scripting"
             />
           }
         />
         <Route
           path="/query"
           element={
-            <LanguageGrid
-              type={languages.filter(
-                (language) => language.type === "query"
-              )}
+            <LanguagesPage
+              type="Query"
             />
           }
         />
