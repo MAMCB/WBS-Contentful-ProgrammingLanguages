@@ -1,8 +1,6 @@
 import ItemCard from "../ItemCard";
 
-const LanguagesGrid = ({entries}) => {
-    console.log(entries, 'Grid');
-    
+const LanguagesGrid = ({entries}) => {    
     return (
         <>
         {entries && entries.map((item ) => {
