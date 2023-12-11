@@ -1,5 +1,8 @@
-const ItemCard = ({fields}) => {
-console.log(fields, "test");
+import { Link } from 'react-router-dom';
+
+const ItemCard = ({fields, id}) => {
+    console.log(fields);
+    console.log(id,'id');
     return (
         <>
         <div className="item-card">
@@ -7,7 +10,7 @@ console.log(fields, "test");
             <h3>{fields.name}</h3>
             <p>{fields.description}</p>
             <p>{fields.useCase}</p>
-            <a>Read more about it</a>
+            <Link to={`/detail-page/${id}`}>More detail</Link>
         </div>
         </>
     )
