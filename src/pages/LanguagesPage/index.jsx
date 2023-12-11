@@ -9,9 +9,7 @@ const LanguagesPage = ({ type }) => {
     fieldToFilter: "type",
     content_type: 'language'
   });
-
-  console.log(filteredEntries);
-
+  
   return (<LanguagesGrid entries={filteredEntries} />)
 };
 
