@@ -1,20 +1,22 @@
 import { useState } from "react";
 import "./App.css";
 import { createClient } from "contentful";
-import { Routes,Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Home from "./pages/HomePage/Home";
-import { useEnvironmentVariables } from './hooks/useEnvironmentVariables';
-import LanguageGrid from './components/LanguageGrid'
-
+import { useEnvironmentVariables } from "./hooks/useEnvironmentVariables";
+import LanguagesPage from "./pages/LanguagesPage";
+import DetailPage from "./pages/DetailPage";
+import NotFound from "./pages/NotFound";
 
 function App() {
-  const[languages,setLanguages]=useState([])
-  const { SPACE_ID, ENVIRONMENT_NAME, ACCESS_TOKEN } = useEnvironmentVariables();
+  const [languages, setLanguages] = useState([]);
+  const { SPACE_ID, ENVIRONMENT_NAME, ACCESS_TOKEN } =
+    useEnvironmentVariables();
 
   const client = createClient({
     space: SPACE_ID,
     environment: ENVIRONMENT_NAME,
-    accessToken: ACCESS_TOKEN
+    accessToken: ACCESS_TOKEN,
   });
 
   return (
@@ -23,34 +25,12 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route
           path="/programming"
-          element={
-            <LanguageGrid
-              type={languages.filter(
-                (language) => language.type === "programming"
-              )}
-            />
-          }
+          element={<LanguagesPage type="Programming" />}
         />
-        <Route
-          path="/script"
-          element={
-            <LanguageGrid
-              type={languages.filter(
-                (language) => language.type === "scripting"
-              )}
-            />
-          }
-        />
-        <Route
-          path="/query"
-          element={
-            <LanguageGrid
-              type={languages.filter(
-                (language) => language.type === "query"
-              )}
-            />
-          }
-        />
+        <Route path="/script" element={<LanguagesPage type="Scripting" />} />
+        <Route path="/query" element={<LanguagesPage type="Query" />} />
+        <Route path="/detail-page/:id" element={<DetailPage />} />
+        <Route path="*" element={<NotFound />} />x
       </Routes>
     </>
   );
