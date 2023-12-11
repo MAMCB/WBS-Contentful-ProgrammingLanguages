@@ -1,22 +1,33 @@
 import { useState,useEffect } from "react";
 import "./App.css";
 import { createClient } from "contentful";
-import { Routes,Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Home from "./pages/HomePage/Home";
-import { useEnvironmentVariables } from './hooks/useEnvironmentVariables';
-import LanguageGrid from './components/LanguageGrid'
-import { Link } from "react-router-dom";
+import { useEnvironmentVariables } from "./hooks/useEnvironmentVariables";
+import LanguagesPage from "./pages/LanguagesPage";
+import DetailPage from "./pages/DetailPage";
+import NotFound from "./pages/NotFound";
+
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { fab } from '@fortawesome/free-brands-svg-icons';
+import { fas } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
+library.add(fab, fas);
+
+import NavBar from "./components/NavBar";
+import Footer from "./components/Footer";
 
 
 function App() {
-  const[languages,setLanguages]=useState([]);
-  
-  const { SPACE_ID, ENVIRONMENT_NAME, ACCESS_TOKEN } = useEnvironmentVariables();
+  const [languages, setLanguages] = useState([]);
+  const { SPACE_ID, ENVIRONMENT_NAME, ACCESS_TOKEN } =
+    useEnvironmentVariables();
 
   const client = createClient({
     space: SPACE_ID,
     environment: ENVIRONMENT_NAME,
-    accessToken: ACCESS_TOKEN
+    accessToken: ACCESS_TOKEN,
   });
 
   useEffect(()=>{
@@ -32,42 +43,19 @@ function App() {
 
   return (
     <>
-      <Link to="/">Home</Link>
-      <Link to="/programming">Programming Languages</Link>
-      <Link to="/script">Scripting Languages</Link>
-      <Link to="/query">Query Languages</Link>
-
+      <NavBar /> {/* Include the NavBar component */}
       <Routes>
         <Route path="/" element={<Home languages={languages} />} />
         <Route
           path="/programming"
-          element={
-            <LanguageGrid
-              type={languages.filter(
-                (language) => language.type === "Programming"
-              )}
-            />
-          }
+          element={<LanguagesPage type="Programming" />}
         />
-        <Route
-          path="/script"
-          element={
-            <LanguageGrid
-              type={languages.filter(
-                (language) => language.type === "Scripting"
-              )}
-            />
-          }
-        />
-        <Route
-          path="/query"
-          element={
-            <LanguageGrid
-              type={languages.filter((language) => language.type === "Query")}
-            />
-          }
-        />
+        <Route path="/script" element={<LanguagesPage type="Scripting" />} />
+        <Route path="/query" element={<LanguagesPage type="Query" />} />
+        <Route path="/detail-page/:id" element={<DetailPage />} />
+        <Route path="*" element={<NotFound />} />x
       </Routes>
+     < Footer /> 
     </>
   );
 }

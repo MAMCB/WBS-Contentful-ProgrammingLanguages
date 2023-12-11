@@ -4,7 +4,7 @@ import { useEnvironmentVariables } from "./useEnvironmentVariables";
 
 export const useAllEntries = () => {
   const { SPACE_ID, ACCESS_TOKEN } = useEnvironmentVariables();
-  const [allEntries, setAllEntries] = useState([]);
+  const [entries, setEntries] = useState([]);
 
   useEffect(() => {
     const client = createClient({
@@ -14,12 +14,12 @@ export const useAllEntries = () => {
 
     client.getEntries().then((entries) => {
       if (entries.items) {
-        setAllEntries(entries.items);
+        setEntries(entries.items);
       }
     }).catch((error) => {
       console.error("Error fetching entries:", error);
     });
   }, []);
-  
-  return allEntries;
+
+  return entries;
 };
