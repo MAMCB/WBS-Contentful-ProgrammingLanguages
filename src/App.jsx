@@ -53,7 +53,7 @@ function App() {
         <Route path="/script" element={<LanguagesPage type="Scripting" />} />
         <Route path="/query" element={<LanguagesPage type="Query" />} />
         <Route path="/detail-page/:id" element={<DetailPage />} />
-        <Route path="*" element={<NotFound />} />x
+        <Route path="*" element={<NotFound />} />
       </Routes>
      < Footer /> 
     </>
