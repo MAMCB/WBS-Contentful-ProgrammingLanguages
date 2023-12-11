@@ -15,7 +15,7 @@ export const useEntryById = ( entryId) => {
     client
       .getEntry(entryId)
       .then((entry) => setEntry(entry))
-      .catch((error) => error.log(error));
+      .catch((error) => console.error(error))
   }, []);
 
   return entry;
