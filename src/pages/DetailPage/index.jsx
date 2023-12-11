@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { useEntryById } from "../../hooks/useEntryById";
+import "./index.css";
 
 const DetailPage = () => {
   const { id } = useParams();
@@ -14,19 +15,21 @@ const DetailPage = () => {
   }, [entryData]);
 
   if (!entry) {
-    return <div>Loading...</div>; // Display a loading state while fetching data
+    return <div className="loader"></div>; // Display a loading state while fetching data
   }
-  
+
   if (!entry.fields) {
-    return <div>Loading...</div>;
+    return <div className="loader"></div>;
   }
 
   return (
     <>
-      <h2>{entry.fields.name}</h2>
-      <h3>{entry.fields.type}</h3>
-      <p>{entry.fields.description}</p>
-      <p>{entry.fields.useCase}</p>
+      <div className="detail-page">
+        <h2>{entry.fields.name}</h2>
+        <h3>{entry.fields.type}</h3>
+        <p>{entry.fields.description}</p>
+        <p>{entry.fields.useCase}</p>
+      </div>
     </>
   );
 };
