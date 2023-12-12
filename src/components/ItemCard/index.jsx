@@ -1,8 +1,6 @@
 import { Link } from 'react-router-dom';
 
 const ItemCard = ({fields, id}) => {
-    console.log(fields);
-    console.log(id,'id');
     return (
         <>
         <div className="item-card">
