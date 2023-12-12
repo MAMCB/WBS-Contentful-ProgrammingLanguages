@@ -9,16 +9,15 @@ import LanguagesPage from "./pages/LanguagesPage";
 import DetailPage from "./pages/DetailPage";
 import NotFound from "./pages/NotFound";
 
-import { library } from '@fortawesome/fontawesome-svg-core';
-import { fab } from '@fortawesome/free-brands-svg-icons';
-import { fas } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { fab } from "@fortawesome/free-brands-svg-icons";
+import { fas } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 library.add(fab, fas);
 
 import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
-
 
 function App() {
   const [languages, setLanguages] = useState([]);
@@ -36,16 +35,12 @@ function App() {
       <NavBar /> {/* Include the NavBar component */}
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route
-          path="/programming"
-          element={<LanguagesPage type="Programming" />}
-        />
-        <Route path="/script" element={<LanguagesPage type="Scripting" />} />
-        <Route path="/query" element={<LanguagesPage type="Query" />} />
+        <Route path="/programming" element={<LanguagesPage />} />
+        <Route path="/languages/:type" element={<LanguagesPage />} /> {/* Use :type parameter */}
         <Route path="/detail-page/:id" element={<DetailPage />} />
-        <Route path="*" element={<NotFound />} />x
+        <Route path="*" element={<NotFound />} />
       </Routes>
-     < Footer /> 
+      <Footer />
     </>
   );
 }
