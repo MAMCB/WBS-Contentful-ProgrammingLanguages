@@ -16,18 +16,18 @@ function BasicExample() {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <NavLink to="/">
+            <Nav.Link to="/">
               <h5>Home</h5>
-            </NavLink>
-            <NavLink to="/programming">
+            </Nav.Link>
+            <Nav.Link to="/programming">
               <h5>Programming languages</h5>
-            </NavLink>
-            <NavLink to="/script">
+            </Nav.Link>
+            <Nav.Link to="/script">
               <h5>Scripting languages</h5>
-            </NavLink>
-            <NavLink to="/query">
+            </Nav.Link>
+            <Nav.Link to="/query">
               <h5>Query languages</h5>
-            </NavLink>
+            </Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

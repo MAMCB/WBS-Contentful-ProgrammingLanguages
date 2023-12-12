@@ -41,19 +41,25 @@ const Home = ({ languages }) => {
           ) : (
             <div className="hero">
               <h1>
-               Explore the Universe of <br/> <span>Programming  <br/>Languages</span>
+                Explore the Universe of <br />{" "}
+                <span>
+                  Programming <br />
+                  Languages
+                </span>
               </h1>
               <div className="logoSlide">
-                 {/* <img
-                  className="logoImages"
-                  src={
-                    languages[
-                      Math.floor(Math.random() * (languages.length - 1))
-                    ].thumbnail.fields.file.url
-                  }
-                  alt="logo"
-                />  */}
-                <img id="gif" src={Gif} alt="gif animation" />
+                {languages.map((e,index) => (
+                  <img key={index}
+                    className="logoImages"
+                    src={
+                     e.thumbnail.fields.file.url
+                    }
+                    alt="logo"
+                  />
+                ))}
+
+                
+                {/* <img id="gif" src={Gif} alt="gif animation" /> */}
               </div>
             </div>
           )}
