@@ -33,6 +33,7 @@ function App() {
   return (
     <>
       <NavBar /> {/* Include the NavBar component */}
+      <body>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/programming" element={<LanguagesPage />} />
@@ -40,6 +41,7 @@ function App() {
         <Route path="/detail-page/:id" element={<DetailPage />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
+      </body>
       <Footer />
     </>
   );
