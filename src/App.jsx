@@ -43,17 +43,17 @@ function App() {
   return (
     <>
       <NavBar /> {/* Include the NavBar component */}
-      <body>
+     
       <Routes>
 
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Home languages={languages}/>} />
         <Route path="/programming" element={<LanguagesPage />} />
         <Route path="/languages/:type" element={<LanguagesPage />} /> {/* Use :type parameter */}
 
         <Route path="/detail-page/:id" element={<DetailPage />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
-      </body>
+     
       <Footer />
     </>
   );
