@@ -1,5 +1,4 @@
-import React from "react";
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import "./App.css";
 import { createClient } from "contentful";
 import { Routes, Route } from "react-router-dom";
@@ -31,11 +30,22 @@ function App() {
     accessToken: ACCESS_TOKEN,
   });
 
+  useEffect(()=>{
+    client
+      .getEntries()
+      .then((response) => setLanguages(response.items.map((e)=>e.fields)))
+      .catch(console.error);
+  },[])
+  
+
+
+ console.log(languages);
+
   return (
     <>
       <NavBar /> {/* Include the NavBar component */}
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Home languages={languages} />} />
         <Route
           path="/programming"
           element={<LanguagesPage type="Programming" />}
@@ -43,7 +53,7 @@ function App() {
         <Route path="/script" element={<LanguagesPage type="Scripting" />} />
         <Route path="/query" element={<LanguagesPage type="Query" />} />
         <Route path="/detail-page/:id" element={<DetailPage />} />
-        <Route path="*" element={<NotFound />} />x
+        <Route path="*" element={<NotFound />} />
       </Routes>
      < Footer /> 
     </>
