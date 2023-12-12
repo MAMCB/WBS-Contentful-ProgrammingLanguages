@@ -25,6 +25,7 @@ const DetailPage = () => {
   return (
     <>
       <div className="detail-page">
+      <img className="detail-page__image" src={entry.fields.thumbnail.fields.file.url} />    
         <h2>{entry.fields.name}</h2>
         <h3>{entry.fields.type}</h3>
         <p>{entry.fields.description}</p>

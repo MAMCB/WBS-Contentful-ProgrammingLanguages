@@ -21,3 +21,7 @@
   padding: 40px 20px;
   border-radius: 50px;
 }
+
+.detail-page__image {
+  width: 90px;
+}

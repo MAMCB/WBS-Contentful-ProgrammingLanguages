@@ -1,0 +1,8 @@
+.item-card__image {
+  width: 90px;
+}
+
+.item-card {
+  background-color: aqua;
+  padding: 20px 10px;
+}
