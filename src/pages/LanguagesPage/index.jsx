@@ -1,16 +1,19 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import LanguagesGrid from "../../components/LanguagesGrid";
-import { useFilteredEntries } from "../../hooks/useFilteredEntries";
+import { useParams } from "react-router-dom";
 
-const LanguagesPage = ({ type }) => {
+const LanguagesPage = () => {
+  const { type: routeType } = useParams();
+  const [type, setType] = useState(routeType);
+  const [key, setKey] = useState(0);
 
-  const filteredEntries = useFilteredEntries({
-    searchQuery: `${type}`,
-    fieldToFilter: "type",
-    content_type: 'language'
-  });
-  
-  return (<LanguagesGrid entries={filteredEntries} />)
+  useEffect(() => {
+    setType(routeType);
+    setKey((prevKey) => prevKey + 1);
+  }, [routeType]);
+
+  return <LanguagesGrid type={type} key={key} />;
 };
 
 export default LanguagesPage;
+)
