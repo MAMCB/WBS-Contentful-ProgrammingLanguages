@@ -1,5 +1,4 @@
-import React from "react";
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import "./App.css";
 import { createClient } from "contentful";
 import { Routes, Route } from "react-router-dom";
@@ -30,14 +29,27 @@ function App() {
     accessToken: ACCESS_TOKEN,
   });
 
+  useEffect(()=>{
+    client
+      .getEntries()
+      .then((response) => setLanguages(response.items.map((e)=>e.fields)))
+      .catch(console.error);
+  },[])
+  
+
+
+ console.log(languages);
+
   return (
     <>
       <NavBar /> {/* Include the NavBar component */}
       <body>
       <Routes>
+
         <Route path="/" element={<Home />} />
         <Route path="/programming" element={<LanguagesPage />} />
         <Route path="/languages/:type" element={<LanguagesPage />} /> {/* Use :type parameter */}
+
         <Route path="/detail-page/:id" element={<DetailPage />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
