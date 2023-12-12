@@ -110,6 +110,16 @@ span{
     
 }
 
+.displayItem{
+  width:30%;
+  margin: 2rem auto;
+  font-size: 30px;
+}
+
+.displayItem img{
+  width: 20rem;
+}
+
 @media  (max-width:1400px) {
   .logoSlide{
     display:none;
