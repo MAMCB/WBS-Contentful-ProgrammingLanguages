@@ -6,17 +6,16 @@ import "./index.css";
 const LanguagesPage = () => {
   const { type: routeType } = useParams();
   const [type, setType] = useState(routeType);
-  const [key, setKey] = useState(0);
 
   useEffect(() => {
     setType(routeType);
-    setKey((prevKey) => prevKey + 1);
   }, [routeType]);
 
-  return(
-  <div className="languages-page">
-    <LanguagesGrid type={type} key={key} />
-  </div>);
+  return (
+    <div className="languages-page">
+      <LanguagesGrid type={type} />
+    </div>
+  );
 };
 
 export default LanguagesPage;
