@@ -1,19 +1,22 @@
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
+import "./index.css";
 
-const ItemCard = ({fields, id}) => {
-    console.log(fields);
-    console.log(id,'id');
-    return (
-        <>
-        <div className="item-card">
-            <img src="" />    
-            <h3>{fields.name}</h3>
-            <p>{fields.description}</p>
-            <p>{fields.useCase}</p>
-            <Link to={`/detail-page/${id}`}>More detail</Link>
-        </div>
-        </>
-    )
-}
+const ItemCard = ({ fields, id }) => {
+  return (
+    <>
+      <div className="item-card">
+        <img
+          className="item-card__image"
+          src={fields.thumbnail.fields.file.url}
+        />
+        <div className="item-card__info-container">
+          <h3>{fields.name}</h3>
+          <p>{fields.useCase}</p>
+          <Link to={`/detail-page/${id}`}>More detail</Link>
+        </div>{" "}
+      </div>
+    </>
+  );
+};
 
-export default ItemCard
+export default ItemCard;

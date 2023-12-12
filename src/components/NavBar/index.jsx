@@ -5,6 +5,8 @@ import Navbar from 'react-bootstrap/Navbar';
 import { NavLink } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
+
+
 import './index.css'; 
 
 function BasicExample() {
@@ -16,18 +18,13 @@ function BasicExample() {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link to="/">
-              <h5>Home</h5>
-            </Nav.Link>
-            <Nav.Link to="/programming">
-              <h5>Programming languages</h5>
-            </Nav.Link>
-            <Nav.Link to="/script">
-              <h5>Scripting languages</h5>
-            </Nav.Link>
-            <Nav.Link to="/query">
-              <h5>Query languages</h5>
-            </Nav.Link>
+
+            <Nav.Link as={NavLink} to="/"><h5>Home</h5></Nav.Link>
+            <Nav.Link as={NavLink} to="/languages/programming"><h5>Programming languages</h5></Nav.Link>
+            <Nav.Link as={NavLink} to="/languages/scripting"><h5>Scripting languages</h5></Nav.Link>
+            <Nav.Link as={NavLink} to="/languages/query"><h5>Query languages</h5></Nav.Link>
+           
+
           </Nav>
         </Navbar.Collapse>
       </Container>

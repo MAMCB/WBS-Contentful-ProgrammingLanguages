@@ -17,7 +17,20 @@
 }
 
 .detail-page {
-  background-color: #2c0b0570;
+  background-color: #b0cbb5;
   padding: 40px 20px;
   border-radius: 50px;
+  max-width: 700px;
+  margin-left: 450px;
+}
+
+.detail-page__info-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.detail-page__image {
+  width: 90px;
 }
