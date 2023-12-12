@@ -29,7 +29,7 @@ export const useFilteredEntries = ({
       .catch((error) => {
         console.log("Error fetching entries", error);
       });
-  }, []);
+  }, [searchQuery]);
 
   return entries;
 };
