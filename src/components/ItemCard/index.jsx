@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 import "./index.css";
 
 const ItemCard = ({ fields, id }) => {
-  console.log(fields.thumbnail.fields.file.url);
   return (
     <>
       <div className="item-card">
