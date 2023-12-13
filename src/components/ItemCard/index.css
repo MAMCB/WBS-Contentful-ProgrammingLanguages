@@ -13,3 +13,16 @@
   flex-direction: column;
   align-items: center;
 }
+
+@media (max-width:425px)
+{
+  .item-card{
+    
+    font-size: 15px;
+    padding:3rem;
+    width:20rem;
+  }
+  .item-card__image{
+    width:5rem;
+  }
+}

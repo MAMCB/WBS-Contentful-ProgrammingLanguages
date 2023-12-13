@@ -1,12 +1,12 @@
 
 
 .footer {
-  background: url('images/img1.jpg');
+  background-image: url('images/img1.jpg');
  /* background-image: url('images/img2.webp');*/
-  background-size: 70% auto; 
+  background-size: 100% auto; 
   background-position: right;  
   background-repeat: no-repeat; 
-  background-color: rgb(27, 17, 71);
+   background-color: rgb(103, 98, 129);
   color: rgb(245, 231, 36);
   text-align: center;
 
@@ -34,5 +34,29 @@ padding-top: 30px;
 
 .social-icon {
   margin-right: 10px;
+}
+
+@media (max-width:768px)
+{
+ .icon{
+  
+  width: 50px !important;
+  height: 50px !important;
+  border-radius: 50%;
+ }
+}
+
+@media (max-width:425px)
+{
+   .icon{
+  
+  width: 30px !important;
+  height: 30px !important;
+  border-radius: 50%;
+ }
+
+ .footer{
+  height:8rem;
+ }
 }
 

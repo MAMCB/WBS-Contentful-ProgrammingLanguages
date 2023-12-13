@@ -21,7 +21,9 @@
   padding: 40px 20px;
   border-radius: 50px;
   max-width: 700px;
-  margin-left: 450px;
+  /* margin-left: 450px; */
+  margin: auto;
+  height: 80%;
 }
 
 .detail-page__info-container {
@@ -33,4 +35,16 @@
 
 .detail-page__image {
   width: 90px;
+}
+
+.detail-page-container{
+  padding-top:5rem;
+  height:100%;
+   background: rgb(244, 245, 254);
+  background: linear-gradient(
+    180deg,
+    rgb(190, 193, 214) 2%,
+    rgb(62, 64, 129) 50%,
+    rgb(13, 28, 32) 89%
+  );
 }
