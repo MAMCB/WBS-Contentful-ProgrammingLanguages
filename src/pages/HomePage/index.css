@@ -113,11 +113,11 @@
 .displayItem{
   width:30%;
   margin: 2rem auto;
-  font-size: 30px;
+  font-size: 20px;
 }
 
 .displayItem img{
-  width: 20rem;
+  width: 10rem;
 }
 
 @media  (max-width:1400px) {
@@ -140,7 +140,7 @@
 
 @media (max-width:1800px) and (min-width:1410px)
 {.displayItem img{
-  width: 10rem;
+  width: 5rem;
 }
 .displayItem{
  
@@ -169,7 +169,7 @@
 }
 .displayItem{
   
-  font-size: 15px;
+  font-size: 20px;
   width:20rem;
 }
 }
@@ -189,7 +189,7 @@
 }
 .displayItem{
   
-  font-size: 15px;
+  font-size: 20px;
   width:20rem;
 }
 
