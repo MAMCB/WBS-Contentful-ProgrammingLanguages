@@ -13,7 +13,7 @@ const Footer = () => {
 
           <div className="social-icons">
             <a href="#" className="social-icon">
-              <SocialIcon network="linkedin" />
+              <SocialIcon className="icon" network="linkedin" />
             </a>
             <a
               href="https://github.com/MAMCB/WBS-Contentful-ProgrammingLanguages"
@@ -21,19 +21,19 @@ const Footer = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <SocialIcon network="github" />
+              <SocialIcon className="icon" network="github" />
             </a>
             <a href="#" className="social-icon">
-              <SocialIcon network="facebook" />
+              <SocialIcon className="icon" network="facebook" />
             </a>
             <a href="#" className="social-icon">
-              <SocialIcon network="instagram" />
+              <SocialIcon className="icon" network="instagram" />
             </a>
             <a href="#" className="social-icon">
-              <SocialIcon network="youtube" />
+              <SocialIcon className="icon" network="youtube" />
             </a>
             <a href="#" className="social-icon">
-              <SocialIcon network="twitter" />
+              <SocialIcon className="icon" network="twitter" />
             </a>
           </div>
         </div>

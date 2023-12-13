@@ -9,10 +9,11 @@
   
   /* Style the navbar links */
   .navbar-nav .nav-link {
+    
     color: rgb(245, 231, 36);
     font-stretch: wider;
    
-    background-color: rgb(27, 17, 71);
+    background-color: rgb(103, 98, 129);
     flex: 1;
     text-align: center; 
   }
@@ -47,6 +48,10 @@
 
   #navBar{
     padding: 0;
+  }
+
+  .navbar-toggler-icon{
+    font-size: 20px;
   }
   
  

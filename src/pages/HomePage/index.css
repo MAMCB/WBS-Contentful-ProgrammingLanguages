@@ -104,7 +104,7 @@
   justify-content: space-around;
 }
 
-span{
+.home span{
     line-height: 8rem;
     font-size: 90px;
     
@@ -127,6 +127,18 @@ span{
   .home h1{
     margin-bottom: 2rem;
   }
+  
+}
+
+@media (max-width:1800px)
+{.displayItem img{
+  width: 10rem;
+}
+.displayItem{
+ 
+  font-size: 20px;
+}
+
 }
 
 @media(min-width:2200px)
@@ -140,4 +152,38 @@ span{
   .home h1{
     margin-top: 8rem;
   }
+    
 }
+
+@media(max-width:768px){
+  .displayItem img{
+  width: 5rem;
+}
+.displayItem{
+  
+  font-size: 15px;
+  width:20rem;
+}
+}
+
+@media (max-width:468px)
+{
+  .home h1{
+    font-size: 20px;
+  }
+  .home span{
+    line-height: 8rem;
+    font-size: 30px;
+    
+}
+.displayItem img{
+  width: 5rem;
+}
+.displayItem{
+  
+  font-size: 15px;
+  width:20rem;
+}
+
+}
+
