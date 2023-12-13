@@ -127,10 +127,18 @@
   .home h1{
     margin-bottom: 2rem;
   }
+  .displayItem img{
+  width: 8rem;
+}
+.displayItem{
+  
+  font-size: 15px;
+  width:20rem;
+}
   
 }
 
-@media (max-width:1800px)
+@media (max-width:1800px) and (min-width:1410px)
 {.displayItem img{
   width: 10rem;
 }
