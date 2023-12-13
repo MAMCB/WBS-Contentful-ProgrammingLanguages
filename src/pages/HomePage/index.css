@@ -34,7 +34,7 @@
 }
 
 #search-button {
-  margin: 3rem auto;
+  margin: 1.5rem auto;
   height: 3.5rem;
   font-size: 25px;
   padding: 1rem;
@@ -57,7 +57,7 @@
 }
 
 .logoSlide {
- margin-top: 8rem;
+ margin-top: 5rem;
   animation: fade 3s linear 1s infinite alternate;
   display: grid;
   grid-template-columns: 16% 16% 16% 16% 16% 16%;
