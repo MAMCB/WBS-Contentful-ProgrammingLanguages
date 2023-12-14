@@ -17,12 +17,34 @@
 @media (max-width:425px)
 {
   .item-card{
-    
+    margin-left: -2rem;
     font-size: 15px;
     padding:3rem;
     width:20rem;
   }
   .item-card__image{
     width:5rem;
+  }
+}
+
+@media (max-width:768px)
+{ .item-card{
+    
+    font-size: 15px;
+    padding:2rem;
+    width:20rem;
+  }
+  .item-card__image{
+    width:5rem;
+  }
+
+}
+
+@media(max-width:378px)
+{
+  .item-card{
+    font-size: 12px;
+    width: 15rem;
+    margin-left: 1rem;
   }
 }

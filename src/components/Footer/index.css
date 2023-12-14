@@ -60,3 +60,15 @@ padding-top: 30px;
  }
 }
 
+@media (max-width:350px)
+{
+  .icon{
+    width: 20px !important;
+  height: 20px !important;
+  border-radius: 50%;
+  }
+  .footer{
+  height:7rem;
+ }
+}
+

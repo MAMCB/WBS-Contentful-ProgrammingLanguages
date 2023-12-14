@@ -10,10 +10,29 @@
 @media(max-width:428px)
 {
   .languages-grid{
+    padding-left: 8rem;
+    justify-content: center;
     display: flex;
     flex-direction: column;
   }
 
  
   
+}
+
+@media(max-width:375px)
+{
+  .languages-grid{
+    padding-left: 6rem;
+    
+  }
+}
+
+@media (max-width:768px)
+{
+  .languages-grid{
+    margin-left: -6rem;
+    grid-template-columns: 1fr 1fr;
+    gap:15px;
+  }
 }

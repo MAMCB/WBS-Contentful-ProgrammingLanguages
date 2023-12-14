@@ -1,4 +1,6 @@
 .loader {
+  
+  margin: auto;
   border: 16px solid #f3f3f3; /* Light grey */
   border-top: 16px solid #e0634d; /* Blue */
   border-radius: 50%;
@@ -47,4 +49,30 @@
     rgb(62, 64, 129) 50%,
     rgb(13, 28, 32) 89%
   );
+}
+
+@media (max-width:768px)
+{
+  .detail-page{
+
+    font-size: 15px;
+    width:25rem;
+  }
+}
+
+@media (max-width:425px)
+{
+  .detail-page{
+
+    
+    width:18rem;
+  }
+}
+
+@media(max-width:375px)
+{
+  .detail-page{
+    font-size: 12px;
+    width:15rem;
+  }
 }
