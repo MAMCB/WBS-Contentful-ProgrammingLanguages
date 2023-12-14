@@ -111,6 +111,7 @@
 }
 
 .displayItem{
+  padding:20px;
   width:30%;
   margin: 2rem auto;
   font-size: 20px;
@@ -119,11 +120,50 @@
 .displayItem img{
   width: 10rem;
 }
+@media (max-width:1440px)
+{
+  .home h1{
+    font-size: 30px;
+  }
+  .home span{
+    line-height: 4rem;
+    font-size: 38px;
+    
+}
+.searchInput {
+  font-size:15px ;
+  text-align: center;
+  margin-top:0.5rem;
+  width:15rem;
+  height:2.5rem;
+}
+#search-button {
+  margin-top:0.2rem;
+  font-size: 15px;
+  height:2.5rem;
+}
+
+.logoSlide{
+  width:25rem;
+  height:25rem;
+}
+ .displayItem img{
+  width: 8rem;
+}
+.displayItem{
+  
+  font-size: 15px;
+  width:35rem;
+}
+
+}
 
 @media  (max-width:1400px) {
-  .logoSlide{
-    display:none;
-  }
+  
+ .logoSlide{
+  width:20rem;
+  height:20rem;
+}
   .home h1{
     margin-bottom: 2rem;
   }
@@ -138,7 +178,41 @@
   
 }
 
-@media (max-width:1800px) and (min-width:1410px)
+@media(max-width:1024px){
+   .logoSlide{
+    display:none;
+  }
+  .displayItem img{
+  width: 5rem;
+}
+.displayItem{
+  
+  font-size: 15px;
+  width:20rem;
+}
+ .home h1{
+    font-size: 30px;
+  }
+  .home span{
+    line-height: 4rem;
+    font-size: 38px;
+    
+}
+.searchInput {
+  font-size:15px ;
+  text-align: center;
+  margin-top:0.5rem;
+  width:15rem;
+  height:2.5rem;
+}
+#search-button {
+  margin-top:0.2rem;
+  font-size: 15px;
+  height:2.5rem;
+}
+}
+
+/* @media (max-width:1800px) 
 {.displayItem img{
   width: 5rem;
 }
@@ -147,7 +221,7 @@
   font-size: 20px;
 }
 
-}
+} */
 
 @media(min-width:2200px)
 {
@@ -169,9 +243,30 @@
 }
 .displayItem{
   
-  font-size: 20px;
-  width:20rem;
+  font-size: 15px;
+  width:25rem;
 }
+ .home h1{
+    font-size: 25px;
+  }
+  .home span{
+    line-height: 4rem;
+    font-size: 30px;
+    
+}
+.searchInput {
+  font-size:15px ;
+  text-align: center;
+  margin-top:0.5rem;
+  width:15rem;
+  height:2.5rem;
+}
+#search-button {
+  margin-top:0.2rem;
+  font-size: 15px;
+  height:2.5rem;
+}
+
 }
 
 @media (max-width:468px)
@@ -189,9 +284,18 @@
 }
 .displayItem{
   
-  font-size: 20px;
-  width:20rem;
+  font-size: 10px;
+  width:22rem;
 }
+
+}
+
+@media(max-width:375px)
+{
+  .displayItem img{
+  width: 5rem;
+}
+
 
 }
 

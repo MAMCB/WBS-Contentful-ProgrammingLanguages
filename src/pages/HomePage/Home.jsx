@@ -22,6 +22,7 @@ const Home = ({ languages }) => {
     languageToDisplay
       ? setDisplayLanguage(languageToDisplay)
       : alert("Could not find that language " + languageToDisplay + languageToFind );
+      setLanguageToFind("");
       
   };
 
@@ -79,6 +80,7 @@ const Home = ({ languages }) => {
               type="text"
               onChange={storeValue}
               placeholder="Search for a language"
+              value={languageToFind}
             />
             <button id="search-button" onClick={handleSearch}>
               Search
