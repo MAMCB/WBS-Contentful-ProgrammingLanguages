@@ -120,7 +120,7 @@
 .displayItem img{
   width: 10rem;
 }
-@media (max-width:1440px)
+@media (max-width:1600px)
 {
   .home h1{
     font-size: 30px;
